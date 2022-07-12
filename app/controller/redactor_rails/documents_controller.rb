@@ -17,6 +17,7 @@ class RedactorRails::DocumentsController < ApplicationController
       @document.assetable = redactor_current_user
     end
 
+
     if @document.save
       render json: { filelink: @document.url, filename: @document.filename }
     else
